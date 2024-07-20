@@ -1,4 +1,4 @@
-const DOMAIN_HOST = `/Git_tutorial`;
+const DOMAIN_HOST = `https://leeyang19970916.github.io/Git_tutorial`;
 const LOCAL_HOST = ``;
 
 // 判斷當前是否在本地運行
