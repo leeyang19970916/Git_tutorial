@@ -1,2 +1,2 @@
-# git_tut
+# Git_tutorial
 Git Bash Practice
