@@ -1,4 +1,4 @@
-const linkPage=[
+const PageList=[
     {
         id:"Git-clone",
         name:"Git clone"
@@ -11,3 +11,4 @@ const linkPage=[
 
 
 
+export default PageList
