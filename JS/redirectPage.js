@@ -8,6 +8,9 @@ const redirectPage = (dom) => {
     if (pageID==="sideBar") {
       return
     }
+    if (e.classList.contains("active")) {
+      return
+    }
     const isExist=PageList.findIndex(i=>i.id===pageID)
     if (isExist===-1 ) {
       window.location.href = `${basePath}/`;

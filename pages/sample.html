@@ -34,8 +34,9 @@
         document.title = `${UrlID} Note`
         SideBar(UrlID)
         buildMajorData(UrlID)
-
         mainUI()
+        contentUI()
+
     }
     const buildMajorData=(UrlID)=>{
         const {id,name} = PageList.filter(i => i.id === UrlID)[0]
@@ -51,6 +52,18 @@
         let mainDom = document.querySelector("main")
         let title = mainDom.querySelector(".title")
         title.innerHTML = `[ ${majorData.name} ]`
+    }
+    const contentUI=()=>{
+        let mainDom = document.querySelector("main")
+        let desc = mainDom.querySelector(".desc")
+        let string=''
+        majorData.desc.forEach(i => {
+            string+=`<div class='card'>
+                <div class='card-note'>${i.note}</div>
+                <div class='card-date'>${i.date}</div>
+                </div>`
+        });
+        desc.innerHTML=string
     }
 
     inital()

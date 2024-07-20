@@ -1,8 +1,28 @@
 @import "./sideBar";
 main{
+    overflow: scroll;
     width: 100%;
     padding: 1rem;
     h1{
         margin-top: 0;
+    }
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    .card{
+        background-color: $card-bg;
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .card-date{
+            width: 100%;
+            text-align: end;
+        }
     }
 }
