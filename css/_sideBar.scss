@@ -9,6 +9,7 @@ nav{
         gap: .5rem;
         padding: 1rem;
         .sidebarItem{
+            cursor: pointer;
             &.active{
                 color: rgb(234, 146, 64);
             }
