@@ -14,4 +14,41 @@
   text-align: center;
   font-weight: bolder;
   color: lightskyblue;
+}
+.categoryCon #todoList ul, .categoryCon #noteLink ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+}
+nav#sideBar {
+  height: 100vh;
+  width: 20%;
+  max-width: 200px;
+  border-right: 3px solid salmon;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+nav#sideBar .sidebarItem.active {
+  color: rgb(234, 146, 64);
+}
+
+#root-page {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+main {
+  width: 100%;
+  padding: 1rem;
+}
+main h1 {
+  margin-top: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }/*# sourceMappingURL=all.css.map */

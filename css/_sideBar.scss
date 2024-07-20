@@ -1,0 +1,17 @@
+nav{
+    &#sideBar{
+        height: 100vh;
+        width: 20%;
+        max-width: 200px;
+        border-right: 3px solid salmon;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        padding: 1rem;
+        .sidebarItem{
+            &.active{
+                color: rgb(234, 146, 64);
+            }
+        }
+    }
+}

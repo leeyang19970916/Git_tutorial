@@ -13,5 +13,14 @@
             font-weight: bolder;
             color: lightskyblue;
         }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap:.5rem;
+            margin: 0;
+            li{
+
+            }
+        }
     }
 }

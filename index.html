@@ -9,7 +9,7 @@
     <title>git tut</title>
 </head>
 
-<body>
+<body >
     <h1>7/20 Git Bash 練習區拉</h1>
     <p>為了這個瞬間，我做了多久＝＝,後面根本不知道自己在幹嘛，笑死
     </p>
@@ -32,3 +32,17 @@
 
 </html>
 
+<script type="module">
+    import PageList from "./JS/listForPage.js";
+    import redirectPage from "./JS/redirectPage.js"
+    const noteLink_Render = () => {
+        const ulDom = document.querySelector("#noteLink ul")
+        let str = ''
+        PageList.forEach(item => {
+            str += `<li id=${item.id}>${item.name}</li>`
+        });
+        ulDom.innerHTML = str
+        redirectPage(ulDom,"sidebar")
+    }
+    noteLink_Render()
+</script>
