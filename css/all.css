@@ -1,0 +1,17 @@
+.categoryCon {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+.categoryCon #todoList, .categoryCon #noteLink {
+  width: 50%;
+  border: 3px solid lightcoral;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.categoryCon #todoList .title, .categoryCon #noteLink .title {
+  text-align: center;
+  font-weight: bolder;
+  color: lightskyblue;
+}/*# sourceMappingURL=all.css.map */
