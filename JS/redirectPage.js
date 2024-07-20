@@ -1,13 +1,14 @@
+import basePath from "./domain.js";
+
 const redirectPage = (dom) => {
-  dom.addEventListener("click", () => {
+  dom.addEventListener("click", (event) => {
     const e = event.target;
     const pageID = e.getAttribute("id");
-    if (pageID==="Index") {
-      window.location.href = '/';
-      ;
-      return
+    if (pageID === "Index") {
+      window.location.href = `${basePath}/`;
+      return;
     }
-    window.open(`../pages/sample.html?id=${pageID}`);
+    window.open(`${basePath}/pages/sample.html?id=${pageID}`);
   });
 };
 

@@ -34,7 +34,7 @@
 
 <script type="module">
     import PageList from "./JS/listForPage.js";
-    import redirectPage from "./JS/redirectPage.js"
+    import redirectPage from "./JS/redirectPage.js";
     const noteLink_Render = () => {
         const ulDom = document.querySelector("#noteLink ul")
         let str = ''
@@ -42,7 +42,7 @@
             str += `<li id=${item.id}>${item.name}</li>`
         });
         ulDom.innerHTML = str
-        redirectPage(ulDom,"sidebar")
+        redirectPage(ulDom, "sidebar")
     }
     noteLink_Render()
 </script>
