@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/all.css">
+    <link rel="shortcut icon" href="./facivon.png" type="image/x-icon" />
+
     <title>demo</title>
 </head>
+
 <body id="root-page">
     <nav id="sideBar">
     </nav>
@@ -18,28 +22,35 @@
         </section>
     </main>
 </body>
+
 </html>
 <script type="module">
     import SideBar from "../JS/sideBarUI.js";
-    import PageList from "../JS/listForPage.js"
-    let majorData={}
-    const inital=()=>{
-        const UrlID=getUrlID()
-        document.title=`${UrlID} Note`
+    import PageList from "../JS/listForPage.js";
+    import formatData from "../desc/formatData.js"
+    let majorData = {}
+    const inital = () => {
+        const UrlID = getUrlID()
+        document.title = `${UrlID} Note`
         SideBar(UrlID)
-        majorData=PageList.filter(i=>i.id===UrlID)[0]
-        
+        buildMajorData(UrlID)
+
         mainUI()
     }
-    const getUrlID=()=>{
+    const buildMajorData=(UrlID)=>{
+        const {id,name} = PageList.filter(i => i.id === UrlID)[0]
+        const {desc}=formatData.filter(i=>i.id===UrlID)[0]
+        majorData={id,name,desc}
+    }
+    const getUrlID = () => {
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get('id');
         return id
     }
-    const mainUI=()=>{
-        let mainDom=document.querySelector("main")
-        let title=mainDom.querySelector(".title")
-        title.innerHTML=`Title: ${majorData.name}`
+    const mainUI = () => {
+        let mainDom = document.querySelector("main")
+        let title = mainDom.querySelector(".title")
+        title.innerHTML = `[ ${majorData.name} ]`
     }
 
     inital()
