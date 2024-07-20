@@ -1,8 +1,13 @@
+@import "layout";
+@import "color";
 @import "./index";
 @import "./page";
 
 body {
-    & #root-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    &#root-page {
         display: flex;
         flex-wrap: nowrap;
     }
